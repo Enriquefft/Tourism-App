@@ -54,55 +54,64 @@
 
 \subsection{Must have}
   \begin{itemize}
-    \item Sistema de login para empresas
+    \item Sistema de login para empresas \\
       Autenticación y autorización para empresas en base a identificadores únicos
-    \item Sistema de register para empresas
+    \item Sistema de register para empresas \\
       Proceso de validación por medio de identificadores únicos
-    \item Registro de eventos
+    \item Registro de eventos \\
       Las empresas deben poder ingresar eventos por medio de un formulario desde su cuenta personal en la app. Estos deberan incluir fotos e información de estos.
-    \item Selección de eventos
+    \item Selección de eventos \\
       Los usuario deben ser capaces de seleccionar multiples eventos de su interes, esto se debe almacenar de manera persistente
-    \item Visualización de ofertas
-      Los usuario deben ser capaces de visualizar las diversas ofertas correspondientes a eventos que hallan seleccionado o no, junto con la infomación detallada y restricciones de la oferta.
-    \item Sistema de gamificación
+    \item Sistema de gamificación \\
       Brindar puntos en la app a los usuarios en función de su asistencia a locales y consumo de ofertas en negocios locales.
-    \item Visualización de ruta
+    \item Visualización de ruta \\
       El usuario debera ser capaz de visualizar una ruta a los eventos u locales seleccionados
 
   \end{itemize}
 
 \subsection{Should have}
   \begin{itemize}
-    \item Sistema de login y register para usuarios
+    \item Sistema de login y register para usuarios \\
       exclusivamente por medio de la api de google authentication
-    \item Ubicación del usuario en tiempo real
+    \item Ubicación del usuario en tiempo real \\
+      Mostrar en el mapa de la aplicación la ubicacion del usuario en tiempo real.
+    \item Visualización de ofertas \\
+      Los usuario deben ser capaces de visualizar las diversas ofertas correspondientes a eventos que hallan seleccionado o no, junto con la infomación detallada y restricciones de la oferta.
   \end{itemize}
 
 \subsection{Could have}
   \begin{itemize}
-    \item Autenticación simple para empresas
+    \item Autenticación simple para empresas \\
       posibilidad de usar la api de google para facil ingreso.
   \end{itemize}
 
 \subsection{Won't have}
   \begin{itemize}
-    \item a
+    \item a \\
   \end{itemize}
 
 \section{Requesitos No Funcionales}
 
 \subsection{Must have}
   \begin{itemize}
-    \item Obtencion de ruta óptima
+    \item Obtencion de ruta óptima \\
       La ruta debera ser obtenida por medio de la api de google maps
-    \item Categorización y labeling de eventos
+    \item Categorización y labeling de eventos \\
       Los eventos, al ser registrados por las empresas, deberan ser categorizados y se agegara un grupo de labels. Esta funcionalidad hara uso de las fotos relacionadas al evento.
+    \item Jerarquización de eventos \\
+      Los eventos mostrados al usuario deberan ser organizados en función de sus labels y las preferencias del usuario
+    \item Almacenamiento de eventos ingresados por las empresas
+      Se deberan almacenar los eventos con una velocidad de I/O inferior a 3 segundos.
   \end{itemize}
 
 \subsection{Should have}
   \begin{itemize}
-    \item Obtencion de ruta con enfoque en turismo
+    \item Obtencion de ruta con enfoque en turismo \\
       La ruta debera ofrecer alternativas interesantes para el turista en base a eventos o locales que podrían ser de su interes.
+    \item Sistema de califiación de eventos \\
+      Los eventos deberan poder ser calificados por los usuarios, esto funcionara con un sistema tipo Proof of Steak
+    \item Jerarquización de eventos en base a su califiación \\
+      Los eventos mostrados al usuario deberan tener una jerarquización adicional en función de su califiación
   \end{itemize}
 
 \printbibliography[title={Bibliography}]
