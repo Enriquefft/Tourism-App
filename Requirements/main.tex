@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+%% Packages
+
+\usepackage[spanish]{babel}          % Language library
+\selectlanguage{spanish}
+
+\usepackage{float}                   % Positioning
+
+\usepackage{xcolor}                  % Colors
+
+\usepackage{biblatex}                % Bibliography
+\addbibresource{referencias.bib}
+
+\usepackage{graphicx}                % Graphics
+\graphicspath{ {./images/}}                         % Set image path
+
+\usepackage{hyperref}                % Hyperlinks
+\hypersetup{
+    urlcolor=blue,                   % Hyperlink color
+    colorlinks=true                  % Enable color links
+}
+
+%% Custom commands
+\usepackage{custom}
+
+\author{
+  \begin{tabular}{cc}
+      \\
+  Chambilla Mamani, Edgar Moises \\
+  Cortijo Gonzales, Luis Enrique \\
+  Pacheco Espino, Franco Matias \\
+  Alvarado Vargas, Fabian Martin \\
+  Chamochumbi Gutierrez, Alexandro Martin \\
+  Quiroz Maquin, Nincol Abraham \\
+  Flores Teniente, Enrique Francisco \\
+  \end{tabular}
+}
+
+\title{Requerimientos del Proyecto}
+\course{Ingenieria de Software}
+\date{\today}
+
+\begin{document}
+
+\input{title.tex}
+
+\tableofcontents
+\newpage
+
+%% ============================================================================
+
+\section{Requesitos Funcionales}
+
+\subsection{Must have}
+  \begin{itemize}
+    \item Sistema de login para empresas
+      Autenticación y autorización para empresas en base a identificadores únicos
+    \item Sistema de register para empresas
+      Proceso de validación por medio de identificadores únicos
+    \item Registro de eventos
+      Las empresas deben poder ingresar eventos por medio de un formulario desde su cuenta personal en la app. Estos deberan incluir fotos e información de estos.
+    \item Selección de eventos
+      Los usuario deben ser capaces de seleccionar multiples eventos de su interes, esto se debe almacenar de manera persistente
+    \item Visualización de ofertas
+      Los usuario deben ser capaces de visualizar las diversas ofertas correspondientes a eventos que hallan seleccionado o no, junto con la infomación detallada y restricciones de la oferta.
+    \item Sistema de gamificación
+      Brindar puntos en la app a los usuarios en función de su asistencia a locales y consumo de ofertas en negocios locales.
+    \item Visualización de ruta
+      El usuario debera ser capaz de visualizar una ruta a los eventos u locales seleccionados
+
+  \end{itemize}
+
+\subsection{Should have}
+  \begin{itemize}
+    \item Sistema de login y register para usuarios
+      exclusivamente por medio de la api de google authentication
+    \item Ubicación del usuario en tiempo real
+  \end{itemize}
+
+\subsection{Could have}
+  \begin{itemize}
+    \item Autenticación simple para empresas
+      posibilidad de usar la api de google para facil ingreso.
+  \end{itemize}
+
+\subsection{Won't have}
+  \begin{itemize}
+    \item a
+  \end{itemize}
+
+\section{Requesitos No Funcionales}
+
+\subsection{Must have}
+  \begin{itemize}
+    \item Obtencion de ruta óptima
+      La ruta debera ser obtenida por medio de la api de google maps
+    \item Categorización y labeling de eventos
+      Los eventos, al ser registrados por las empresas, deberan ser categorizados y se agegara un grupo de labels. Esta funcionalidad hara uso de las fotos relacionadas al evento.
+  \end{itemize}
+
+\subsection{Should have}
+  \begin{itemize}
+    \item Obtencion de ruta con enfoque en turismo
+      La ruta debera ofrecer alternativas interesantes para el turista en base a eventos o locales que podrían ser de su interes.
+  \end{itemize}
+
+\printbibliography[title={Bibliography}]
+
+\end{document}

@@ -1,0 +1,44 @@
+\makeatletter
+  \begin{titlepage}
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \let \footnote \thanks
+    \setcounter{footnote}{0}
+    \null\vfil
+    \begin{center}
+      \setlength{\parskip}{0pt}
+      \vspace{-1.5cm}
+      {\large \textbf{UNIVERSIDAD DE INGENIERÍA Y TECNOLOGÍA}\par}
+      \vfill
+     
+      \href{https://www.utec.edu.pe}{\includegraphics[height=2.5cm]{images/logo_utec.png}}\\
+      \vspace{0.5cm}
+      {\large \coursename \par}
+      \vfil
+      
+      \vspace{0.5cm}
+      {\Large \bf \@title \par}
+      \vfill
+      \smallskip
+      \vspace{0.5cm}
+      {\large \textbf{AUTHOR(S)}\par}
+      {\large \@author \par}
+      \vspace{0.5cm}
+
+      \ifdefined\hasProfesor
+        
+        {\large \bf DOCENTE RESPONSABLE \par}
+        \smallskip
+        {\large \profesorname \par}
+        \vfill
+
+      \fi
+
+      \vspace{1.5cm}
+      {\large Lima - Perú \par}
+      {\large \@date \par}
+    \end{center}
+    \par
+    \vfil\null
+  \end{titlepage}
+  \makeatother
